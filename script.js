@@ -25,7 +25,7 @@ function main() {
     word = word.toUpperCase();
     ids = ["a", "aa", "b", "c", "cc", "d", "e", "ee", "f", "g", "h", "i", "j", "k", "l", "ll", "m", "n", "nn", "o", "oo", "p", "r", "s", "ss", "t", "u", "w", "y", "z", "zi", "zz"];
     aEL(ids, word)
-    console.log(word);
+    
     let rpl = document.getElementById("rpl");
     rpl.addEventListener("click", reset);
     write(word);
@@ -39,7 +39,7 @@ function GetRandInt(max) {
 function handleLetters(x, word) {
     let y = document.getElementById(x);
     if (word.search(y.innerHTML) == -1) {
-        console.log("źle", crt);
+        
         y.style.background = "red"; wrong();
     } else {
         y.style.background = "green";
@@ -63,7 +63,7 @@ function status_gry(word) {
     }
 }
 function przegrana(word) {
-    console.log("przegrana");
+    
     let win = document.getElementById("gover");
     win.style.display = "flex";
 
@@ -78,7 +78,7 @@ function przegrana(word) {
 
 }
 function wygrana() {
-    console.log("wygrana");
+    
     let win = document.getElementById("gover");
     let bl = document.getElementById("blur");
     bl.style.display = "block";
@@ -107,7 +107,7 @@ function update(toUpdate) {
             ot += toUpdate[i];
         }
     }
-    console.log(ot);
+    
     return ot;
 }
 
@@ -141,9 +141,9 @@ function reset() {
     word = word.toUpperCase();
     guessed = [];
     write(word);
-    console.log(word);
+    
     ids = ["a", "aa", "b", "c", "cc", "d", "e", "ee", "f", "g", "h", "i", "j", "k", "l", "ll", "m", "n", "nn", "o", "oo", "p", "r", "s", "ss", "t", "u", "w", "y", "z", "zi", "zz"];
-    console.log(clicked);
+    
     aEL(clicked, word);
     clear(clicked);
 
