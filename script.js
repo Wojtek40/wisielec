@@ -62,7 +62,7 @@ function clickIDs(ids) {
 }
 function status_gry(word) {
     if (crt >= 11) {
-        wd.style.color = "red"; setTimeout(przegrana(word), 1000)
+        wd.style.color = "red"; setTimeout(function(){przegrana(word)}, 1000)
         over = true;
     };
     if (wd.innerHTML == word) {
